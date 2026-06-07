@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cek Tarif — KAI</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-text">K<span class="logo-i">A</span>i</span>
+      <span class="logo-dot"></span>
+    </a>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+      <li class="nav-item">
+        <a href="#" class="nav-link active">Perjalanan <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></a>
+        <div class="dropdown-panel">
+          <a href="booking.html"><span>🎫</span> Booking Tiket</a>
+          <a href="jadwal.html"><span>🗓️</span> Jadwal Kereta</a>
+          <a href="tarif.html"><span>💰</span> Cek Tarif</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="promo.html" class="nav-link">Promo</a></li>
+      <li class="nav-item"><a href="bantuan.html" class="nav-link">Bantuan</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-masuk">Masuk</button>
+      <a href="booking.html"><button class="btn-beli">Beli Tiket</button></a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏠 Beranda</a>
+  <a href="booking.html">🎫 Booking Tiket</a>
+  <a href="jadwal.html">🗓️ Jadwal Kereta</a>
+  <a href="tarif.html">💰 Cek Tarif</a>
+  <div class="divider"></div>
+  <a href="promo.html">🏷️ Promo</a>
+  <a href="bantuan.html">🎧 Bantuan</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a><span>›</span><span style="color:rgba(255,255,255,.8)">Cek Tarif</span>
+    </div>
+    <h1>Cek Tarif Tiket</h1>
+    <p>Bandingkan harga dan fasilitas setiap kelas perjalanan</p>
+  </div>
+</div>
+
+<div class="tarif-wrap">
+
+  <!-- Search filter -->
+  <div class="filter-strip" style="margin-bottom:40px">
+    <div class="filter-form">
+      <div class="sfield">
+        <label>Stasiun Asal</label>
+        <div class="sinput-wrap">
+          <span class="sicon">📍</span>
+          <input type="text" value="Malang"/>
+        </div>
+      </div>
+      <button class="swap-btn">⇄</button>
+      <div class="sfield">
+        <label>Stasiun Tujuan</label>
+        <div class="sinput-wrap">
+          <span class="sicon">🏁</span>
+          <input type="text" placeholder="Jakarta Gambir"/>
+        </div>
+      </div>
+      <div class="sfield">
+        <label>Tanggal</label>
+        <div class="sinput-wrap">
+          <span class="sicon">📅</span>
+          <input type="date"/>
+        </div>
+      </div>
+      <button class="btn-cari" style="align-self:flex-end">Cek Tarif</button>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-bottom:36px">
+    <span class="sec-label">Malang → Jakarta Gambir</span>
+    <h2 class="sec-title">Pilih Kelas Perjalanan</h2>
+  </div>
+
+  <div class="tarif-grid">
+
+    <div class="kcard">
+      <div class="kicon">🪑</div>
+      <h3>Kelas Ekonomi</h3>
+      <p class="kdesc">Perjalanan nyaman dengan harga terjangkau</p>
+      <div class="kprice">Rp 195.000 <sub>/ orang</sub></div>
+      <ul class="kfeatures">
+        <li>Kursi tegak dengan sandaran nyaman</li>
+        <li>AC terpusat</li>
+        <li>Bagasi gratis 20 kg</li>
+        <li>Stop kontak di setiap baris</li>
+        <li>Toilet tersedia di setiap gerbong</li>
+      </ul>
+      <a href="booking.html"><button class="btn-pesan">Pesan Sekarang</button></a>
+    </div>
+
+    <div class="kcard highlight">
+      <div class="rec">⭐ Paling Populer</div>
+      <div class="kicon">🛋️</div>
+      <h3>Kelas Bisnis</h3>
+      <p class="kdesc">Kenyamanan lebih dengan kursi yang lega</p>
+      <div class="kprice">Rp 350.000 <sub>/ orang</sub></div>
+      <ul class="kfeatures">
+        <li>Kursi semi-reclining 160°</li>
+        <li>AC individual yang dapat diatur</li>
+        <li>Bagasi gratis 20 kg</li>
+        <li>Stop kontak pribadi</li>
+        <li>Snack & minuman gratis</li>
+        <li>Prioritas boarding</li>
+      </ul>
+      <a href="booking.html"><button class="btn-pesan">Pesan Sekarang</button></a>
+    </div>
+
+    <div class="kcard">
+      <div class="kicon">👑</div>
+      <h3>Kelas Eksekutif</h3>
+      <p class="kdesc">Pengalaman perjalanan premium terbaik</p>
+      <div class="kprice">Rp 550.000 <sub>/ orang</sub></div>
+      <ul class="kfeatures">
+        <li>Kursi reclining 180° (flat bed)</li>
+        <li>AC individual + selimut & bantal</li>
+        <li>Bagasi gratis 30 kg</li>
+        <li>Makan berat & snack premium</li>
+        <li>WiFi onboard</li>
+        <li>Akses lounge eksklusif</li>
+        <li>Prioritas check-in</li>
+      </ul>
+      <a href="booking.html"><button class="btn-pesan">Pesan Sekarang</button></a>
+    </div>
+
+  </div>
+
+  <div class="tip-box">
+    <span style="font-size:22px">💡</span>
+    <p>Harga dapat berubah tergantung ketersediaan dan promo aktif. Gunakan kode <strong>MALANG20</strong> untuk diskon 20% pembelian pertama Anda.</p>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="padding:20px 0">
+      <p>© 2026 PT Kereta Api Indonesia (Persero). Hak Cipta Dilindungi.</p>
+      <p>Redesign Project — FILKOM UB · Kelas A</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

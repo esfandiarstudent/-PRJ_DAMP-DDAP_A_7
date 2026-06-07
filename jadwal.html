@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jadwal Kereta — KAI</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-text">K<span class="logo-i">A</span>i</span>
+      <span class="logo-dot"></span>
+    </a>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+      <li class="nav-item">
+        <a href="#" class="nav-link active">Perjalanan <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></a>
+        <div class="dropdown-panel">
+          <a href="booking.html"><span>🎫</span> Booking Tiket</a>
+          <a href="jadwal.html"><span>🗓️</span> Jadwal Kereta</a>
+          <a href="tarif.html"><span>💰</span> Cek Tarif</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="promo.html" class="nav-link">Promo</a></li>
+      <li class="nav-item"><a href="bantuan.html" class="nav-link">Bantuan</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-masuk">Masuk</button>
+      <a href="booking.html"><button class="btn-beli">Beli Tiket</button></a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">🏠 Beranda</a>
+  <a href="booking.html">🎫 Booking Tiket</a>
+  <a href="jadwal.html">🗓️ Jadwal Kereta</a>
+  <a href="tarif.html">💰 Cek Tarif</a>
+  <div class="divider"></div>
+  <a href="promo.html">🏷️ Promo</a>
+  <a href="bantuan.html">🎧 Bantuan</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a><span>›</span><span style="color:rgba(255,255,255,.8)">Jadwal Kereta</span>
+    </div>
+    <h1>Jadwal Kereta Api</h1>
+    <p>Lihat jadwal keberangkatan dan kedatangan secara real-time</p>
+  </div>
+</div>
+
+<div class="jadwal-wrap">
+
+  <!-- Filter -->
+  <div class="filter-strip" style="margin-bottom:24px">
+    <div class="filter-form">
+      <div class="sfield">
+        <label>Stasiun Asal</label>
+        <div class="sinput-wrap">
+          <span class="sicon">📍</span>
+          <input type="text" value="Malang"/>
+        </div>
+      </div>
+      <button class="swap-btn">⇄</button>
+      <div class="sfield">
+        <label>Stasiun Tujuan</label>
+        <div class="sinput-wrap">
+          <span class="sicon">🏁</span>
+          <input type="text" placeholder="Surabaya Gubeng"/>
+        </div>
+      </div>
+      <div class="sfield">
+        <label>Tanggal</label>
+        <div class="sinput-wrap">
+          <span class="sicon">📅</span>
+          <input type="date"/>
+        </div>
+      </div>
+      <button class="btn-cari" style="align-self:flex-end">Cari Jadwal</button>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="jadwal-table-wrap">
+    <div class="jtable-scroll">
+      <table class="jtable">
+        <thead>
+          <tr>
+            <th>Nama Kereta</th>
+            <th>Kelas</th>
+            <th>Berangkat</th>
+            <th>Tiba</th>
+            <th>Durasi</th>
+            <th>Status</th>
+            <th>Sisa Kursi</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="jname">Malioboro Ekspres</div><div class="jcode">MLG → SGU</div></td>
+            <td><span class="tkelas-badge eks">Eksekutif</span></td>
+            <td class="jtime">06:00</td>
+            <td class="jtime">08:45</td>
+            <td>2j 45m</td>
+            <td><span class="status-ok">✓ Tepat Waktu</span></td>
+            <td>32 kursi</td>
+            <td><a href="booking.html"><button class="btn-pilih">Pesan</button></a></td>
+          </tr>
+          <tr>
+            <td><div class="jname">Jayabaya</div><div class="jcode">MLG → SGU</div></td>
+            <td><span class="tkelas-badge bis">Bisnis</span></td>
+            <td class="jtime">08:15</td>
+            <td class="jtime">11:30</td>
+            <td>3j 15m</td>
+            <td><span class="status-ok">✓ Tepat Waktu</span></td>
+            <td>54 kursi</td>
+            <td><a href="booking.html"><button class="btn-pilih">Pesan</button></a></td>
+          </tr>
+          <tr>
+            <td><div class="jname">Penataran</div><div class="jcode">MLG → SGU</div></td>
+            <td><span class="tkelas-badge eko">Ekonomi</span></td>
+            <td class="jtime">10:30</td>
+            <td class="jtime">13:15</td>
+            <td>2j 45m</td>
+            <td><span class="status-late">⚠ Terlambat 10m</span></td>
+            <td>80 kursi</td>
+            <td><a href="booking.html"><button class="btn-pilih">Pesan</button></a></td>
+          </tr>
+          <tr>
+            <td><div class="jname">Majapahit</div><div class="jcode">MLG → SGU</div></td>
+            <td><span class="tkelas-badge eks">Eksekutif</span></td>
+            <td class="jtime">13:00</td>
+            <td class="jtime">15:50</td>
+            <td>2j 50m</td>
+            <td><span class="status-ok">✓ Tepat Waktu</span></td>
+            <td>18 kursi</td>
+            <td><a href="booking.html"><button class="btn-pilih">Pesan</button></a></td>
+          </tr>
+          <tr>
+            <td><div class="jname">Kertanegara</div><div class="jcode">MLG → SGU</div></td>
+            <td><span class="tkelas-badge bis">Bisnis</span></td>
+            <td class="jtime">16:45</td>
+            <td class="jtime">20:00</td>
+            <td>3j 15m</td>
+            <td><span class="status-ok">✓ Tepat Waktu</span></td>
+            <td>46 kursi</td>
+            <td><a href="booking.html"><button class="btn-pilih">Pesan</button></a></td>
+          </tr>
+          <tr>
+            <td><div class="jname">Gajayana</div><div class="jcode">MLG → SGU</div></td>
+            <td><span class="tkelas-badge eks">Eksekutif</span></td>
+            <td class="jtime">19:30</td>
+            <td class="jtime">22:10</td>
+            <td>2j 40m</td>
+            <td><span class="status-ok">✓ Tepat Waktu</span></td>
+            <td>5 kursi</td>
+            <td><a href="booking.html"><button class="btn-pilih">Pesan</button></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--gray-400);margin-top:12px;text-align:center">
+    🔄 Data diperbarui setiap 5 menit · Terakhir: 02 Jun 2026, 14:30 WIB
+  </p>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="padding:20px 0">
+      <p>© 2026 PT Kereta Api Indonesia (Persero). Hak Cipta Dilindungi.</p>
+      <p>Redesign Project — FILKOM UB · Kelas A</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
